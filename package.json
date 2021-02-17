@@ -11,8 +11,8 @@
     "app:start:dev": "nodemon src/index.js",
     "app:stop": "pm2 stop komvos-bot",
     "build": "tsc",
-    "lint": "eslint ./**/*.js",
-    "lint:fix": "eslint ./**/*.js --fix",
+    "lint": "eslint ./**/*.{js,ts}",
+    "lint:fix": "eslint ./**/*.{js,ts} --fix",
     "prettify": "prettier --write ./**/*.js"
   },
   "keywords": [
@@ -26,25 +26,26 @@
   "author": "Ioannis Tziligkakis",
   "license": "UNLICENSED",
   "dependencies": {
-    "babel-eslint": "^10.1.0",
     "better-logging": "^4.4.0",
     "debug": "^4.2.0",
     "discord-command-parser": "^1.5.1",
     "dotenv": "^8.2.0",
     "eris": "^0.14.0",
-    "eslint": "^7.13.0",
-    "eslint-config-prettier": "^6.15.0",
-    "eslint-plugin-prettier": "^3.1.4",
     "just-camel-case": "^4.0.2",
     "just-is-empty": "^2.0.1",
     "nodemon": "^2.0.6",
     "pm2": "^4.5.1",
     "postgres": "^1.0.2",
-    "prettier": "^2.1.2",
     "prexit": "^0.0.5"
   },
   "devDependencies": {
     "@types/node": "^14.14.28",
+    "@typescript-eslint/eslint-plugin": "^4.15.1",
+    "@typescript-eslint/parser": "^4.15.1",
+    "eslint": "^7.20.0",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "prettier": "^2.2.1",
     "typescript": "^4.1.5"
   }
 }
