@@ -2,7 +2,7 @@
   "name": "komvos-bot",
   "version": "1.0.0",
   "description": "A Discord bot for moderation on a server network basis.",
-  "main": "src/index.js",
+  "main": "built/index.js",
   "scripts": {
     "app:monitor": "pm2 monit",
     "app:reload": "pm2 reload komvos-bot",
