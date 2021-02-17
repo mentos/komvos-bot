@@ -7,9 +7,10 @@
     "app:monitor": "pm2 monit",
     "app:reload": "pm2 reload komvos-bot",
     "app:restart": "pm2 restart komvos-bot",
-    "app:start": "pm2 start src/index.js --name \"komvos-bot\" --log komvos.log --time",
+    "app:start": "pm2 start built/index.js --name \"komvos-bot\" --log komvos.log --time",
     "app:start:dev": "nodemon src/index.js",
     "app:stop": "pm2 stop komvos-bot",
+    "build": "tsc",
     "lint": "eslint ./**/*.js",
     "lint:fix": "eslint ./**/*.js --fix",
     "prettify": "prettier --write ./**/*.js"
@@ -41,5 +42,9 @@
     "postgres": "^1.0.2",
     "prettier": "^2.1.2",
     "prexit": "^0.0.5"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.28",
+    "typescript": "^4.1.5"
   }
 }
