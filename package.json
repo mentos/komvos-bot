@@ -8,12 +8,12 @@
     "app:reload": "pm2 reload komvos-bot",
     "app:restart": "pm2 restart komvos-bot",
     "app:start": "pm2 start built/index.js --name \"komvos-bot\" --log komvos.log --time",
-    "app:start:dev": "nodemon src/index.js",
+    "app:start:dev": "nodemon built/index.js",
     "app:stop": "pm2 stop komvos-bot",
     "build": "tsc",
     "lint": "eslint ./**/*.{js,ts}",
     "lint:fix": "eslint ./**/*.{js,ts} --fix",
-    "prettify": "prettier --write ./**/*.js"
+    "prettify": "prettier --write ./**/*.{js,ts}"
   },
   "keywords": [
     "bot",

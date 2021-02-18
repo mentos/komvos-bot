@@ -2,9 +2,13 @@
   "compilerOptions": {
     "allowJs": true,
     "checkJs": false,
+    "downlevelIteration": true,
+    "esModuleInterop": true,
+    "moduleResolution": "Node",
     "outDir": "./built",
     "rootDir": "./src",
-    "target": "ESNext"
+    "strictNullChecks": true,
+    "target": "ESNext",
   },
   "include": [
     "src/**/*",
