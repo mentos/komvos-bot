@@ -13,15 +13,19 @@ class GuildMemberAdd implements IKomvosEvent {
     const network = await GetGuildActiveNetwork(guild.id);
 
     if (!network) return;
-  
+
     const settings = await this.client.repo.GetGuildClientSettings(guild.id);
-  
-    const channel = this.client.repo.GetGuildChannel(guild, settings.channelId, true);
-  
+
+    const channel = this.client.repo.GetGuildChannel(
+      guild,
+      settings.channelId,
+      true
+    );
+
     const banBroadcast = await GetBanBroadcast(network.id, member.id);
-  
+
     if (!banBroadcast) return;
-  
+
     const description = `> ${banBroadcast.reason || "No reason provided."}\n\n`;
     const fields = [
       { name: "Report Type", value: banBroadcast.report_type },

@@ -10,7 +10,11 @@ class GuildBanRemove implements IKomvosEvent {
     const user = args[1] as Eris.User;
 
     const settings = await this.client.repo.GetGuildClientSettings(guild.id);
-    const channel = this.client.repo.GetGuildChannel(guild, settings.channelId, true);
+    const channel = this.client.repo.GetGuildChannel(
+      guild,
+      settings.channelId,
+      true
+    );
 
     await BroadcastBanRevokeReport({
       bannedUserId: user.id,
