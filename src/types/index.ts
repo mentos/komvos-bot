@@ -1,3 +1,6 @@
+// Enums
+export { default as KomvosEventName } from "./KomvosEventName";
+
 // Interfaces
 export { default as ICommandConfig } from "./ICommandConfig";
 export { default as IKomvosEvent } from "./IKomvosEvent";
