@@ -13,6 +13,6 @@ enum Constants {
   SETTINGS_ALLOW_INVITES = "allowInvites",
   SETTINGS_CHANNEL_ID = "channelId",
   SETTINGS_PREFIX = "prefix",
-};
+}
 
 export default Constants;
