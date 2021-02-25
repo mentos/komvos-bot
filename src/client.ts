@@ -63,4 +63,4 @@ for (const file of commandFiles) {
   client.commands.set(command.name, command);
 }
 
-module.exports = client;
+export default client;
