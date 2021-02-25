@@ -1,8 +1,8 @@
 import Eris from "eris";
-import KomvosClient from "./types/KomvosClient";
-
-const fs = require("fs");
-const path = require("path");
+import fs from "fs";
+import path from "path";
+import KomvosClient from "types/KomvosClient";
+import config from "config";
 
 Object.defineProperty(Eris.Channel.prototype, "isGuildTextChannel", {
   get: function () {
@@ -33,8 +33,6 @@ Object.defineProperty(Eris.User.prototype, "tag", {
     return `${this.username}#${this.discriminator}`;
   },
 });
-
-const config = require("./config");
 
 const client = Eris(config.botToken) as KomvosClient;
 

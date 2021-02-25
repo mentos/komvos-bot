@@ -9,8 +9,6 @@ class GuildCreate implements IKomvosEvent {
 
     await UpdateGuildSettings(
       guild.id,
-
-      // @ts-ignore
       JSON.stringify(config.defaultClientSettings)
     );
   }
